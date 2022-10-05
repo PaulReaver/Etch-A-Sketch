@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(16, 25px [col-start]);
   border: 1px solid black;
-  width:fit-content;
+  width: fit-content;
   height: auto;
 }
 
@@ -11,5 +11,9 @@
     height: 25px;
     width: 25px;
   }
+
+button {
+    margin-bottom: 10px;
+}
 
 
