@@ -7,8 +7,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid lightgrey;
-  width: 500px;
-  height: 500px;
+  width: 800px;
+  height: 800px;
 }
 
 .container>div {
@@ -17,7 +17,9 @@ body {
 }
 
 button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 
