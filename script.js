@@ -13,7 +13,10 @@ function createGrid () {
         let CELL = document.createElement("div");
         CELL.addEventListener("mouseover", () => {
             CELL.style.backgroundColor = "black";    
-        }); 
+        });
+        let calculation = 500/squaresPerSide; 
+        CELL.style.width = calculation + "px"
+        CELL.style.height = calculation + "px"
         CONTAINER.appendChild(CELL);
     }
 }
@@ -23,5 +26,5 @@ document.querySelector("button").addEventListener("click",() => {
     do {
         squaresPerSide = prompt ("Squares per side. Max number is 100.");
         squaresPerSide = Number(squaresPerSide);     
-    } while (squaresPerSide > 100);
+    } while (squaresPerSide > 100 || squaresPerSide < 2);
 })
