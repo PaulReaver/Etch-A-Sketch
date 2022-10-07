@@ -22,8 +22,12 @@ function createGrid () {
     }
 }
 
+//Clears the grid
+document.querySelector("#clear-grid").addEventListener("click", clearGrid);
+
+
 //Asks for a number of cells per side to create new grid
-document.querySelector("button").addEventListener("click",() => {
+document.querySelector("#change-grid-size").addEventListener("click",() => {
     do {
         squaresPerSide = prompt ("Squares per side. Max number is 100.");
         if (squaresPerSide == null) {
@@ -32,11 +36,15 @@ document.querySelector("button").addEventListener("click",() => {
         squaresPerSide = Number(squaresPerSide);  
     } while (squaresPerSide > 100 || squaresPerSide < 2 || isNaN(squaresPerSide));
 
+    //Calls the functions to clear the grid
+    clearGrid();  
+})
+
+function clearGrid() {
     //Clears the old grid
     while (CONTAINER.firstChild) {
         CONTAINER.removeChild(CONTAINER.firstChild);
     }
-
-    // Calls function to create the grid again
+    //Creates the grid
     createGrid();
-})
+}
