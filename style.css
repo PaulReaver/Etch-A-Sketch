@@ -31,19 +31,3 @@ button {
   font-weight: bold;
 }
 
-.white {
-  background-color: white;
-  border: 1px lightgray solid;
-}
-
-.black {
-  background-color: black;
-  border: 1px black solid;
-}
-
-.green {
-  background-color: green;
-  border: 1px green solid;
-}
-
-

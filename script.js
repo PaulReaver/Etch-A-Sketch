@@ -9,18 +9,22 @@ createGrid();
 
 //Color modes
 let modeBlack = true;
-let modeGreen = false;
+let modeRandom = false;
 
 //Creates grid based and changes color of cells
 function createGrid () {
     for (let i = 1; i <= Math.pow(squaresPerSide, 2); i++) {
         let CELL = document.createElement("div");
-        CELL.classList.add("white");
+        CELL.style.backgroundColor = "white";
+        CELL.style.border = "1px lightGrey solid";
         CELL.addEventListener("mouseover", () => {
             if (modeBlack) {
-                CELL.className = "black";
-            } else if (modeGreen){
-                CELL.className = "green"
+                CELL.style.backgroundColor = "black";
+                CELL.style.border = "1px black solid"
+            } else if (modeRandom){
+                let randomColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+                CELL.style.backgroundColor = randomColor;
+                CELL.style.border = `1px ${randomColor} solid`;
             }
         });
         let calculation = 800/squaresPerSide; 
@@ -36,13 +40,13 @@ document.querySelector("#clear-grid").addEventListener("click", clearGrid);
 //Chooses black color
 document.querySelector("#color-black").addEventListener("click", () => {
     modeBlack = true;
-    modeGreen = false;
+    modeRandom = false;
 });
 
-//Chooses green color
-document.querySelector("#color-green").addEventListener("click", () => {
+//Chooses random color
+document.querySelector("#color-random").addEventListener("click", () => {
     modeBlack = false;
-    modeGreen = true;
+    modeRandom = true;
 });
 
 //Asks for a number of cells per side to create new grid
