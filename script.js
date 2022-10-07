@@ -26,8 +26,11 @@ function createGrid () {
 document.querySelector("button").addEventListener("click",() => {
     do {
         squaresPerSide = prompt ("Squares per side. Max number is 100.");
+        if (squaresPerSide == null) {
+            return;
+        }
         squaresPerSide = Number(squaresPerSide);  
-    } while (squaresPerSide > 100 || squaresPerSide < 2);
+    } while (squaresPerSide > 100 || squaresPerSide < 2 || isNaN(squaresPerSide));
 
     //Clears the old grid
     while (CONTAINER.firstChild) {
