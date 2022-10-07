@@ -28,6 +28,21 @@ body {
 button {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
   font-weight: bold;
+  background-color: lightgrey;
+  
+}
+
+button:hover {
+  background-color: dimgrey;
+  color: white;
+}
+
+button:active {
+  background-color: lightgrey;
+  color: black;
 }
 
