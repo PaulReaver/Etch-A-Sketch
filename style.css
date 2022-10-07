@@ -6,7 +6,8 @@ body {
   padding: 0;
 }
 
-.upper-buttons {
+.upper-buttons,
+.lower-buttons {
   display: flex;
   justify-content:space-evenly;
   width: 800px;
@@ -22,13 +23,27 @@ body {
 
 .container>div {
   box-sizing: border-box;
-  border: 1px solid lightgray;
 }
 
 button {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 10px;
   font-weight: bold;
+}
+
+.white {
+  background-color: white;
+  border: 1px lightgray solid;
+}
+
+.black {
+  background-color: black;
+  border: 1px black solid;
+}
+
+.green {
+  background-color: green;
+  border: 1px green solid;
 }
 
 

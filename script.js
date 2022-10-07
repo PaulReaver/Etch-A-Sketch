@@ -7,13 +7,21 @@ let squaresPerSide = 16;
 //Calls function to create the grid
 createGrid();
 
+//Color modes
+let modeBlack = true;
+let modeGreen = false;
+
 //Creates grid based and changes color of cells
 function createGrid () {
     for (let i = 1; i <= Math.pow(squaresPerSide, 2); i++) {
         let CELL = document.createElement("div");
+        CELL.classList.add("white");
         CELL.addEventListener("mouseover", () => {
-            CELL.style.backgroundColor = "black";  
-            CELL.style.borderColor = "black";  
+            if (modeBlack) {
+                CELL.className = "black";
+            } else if (modeGreen){
+                CELL.className = "green"
+            }
         });
         let calculation = 800/squaresPerSide; 
         CELL.style.width = calculation + "px"
@@ -25,6 +33,17 @@ function createGrid () {
 //Clears the grid
 document.querySelector("#clear-grid").addEventListener("click", clearGrid);
 
+//Chooses black color
+document.querySelector("#color-black").addEventListener("click", () => {
+    modeBlack = true;
+    modeGreen = false;
+});
+
+//Chooses green color
+document.querySelector("#color-green").addEventListener("click", () => {
+    modeBlack = false;
+    modeGreen = true;
+});
 
 //Asks for a number of cells per side to create new grid
 document.querySelector("#change-grid-size").addEventListener("click",() => {
