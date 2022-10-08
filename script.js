@@ -52,8 +52,10 @@ document.querySelector("#color-random").addEventListener("click", () => {
 //Asks for a number of cells per side to create new grid
 document.querySelector("#change-grid-size").addEventListener("click",() => {
     do {
+        let oldSquaresPerSide  = squaresPerSide;
         squaresPerSide = prompt ("Squares per side. Max number is 100.");
-        if (squaresPerSide == null) {
+        if (squaresPerSide == null || squaresPerSide == "") {
+            squaresPerSide = oldSquaresPerSide;
             return;
         }
         squaresPerSide = Number(squaresPerSide);  

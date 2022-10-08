@@ -8,9 +8,9 @@ body {
 
 .upper-buttons,
 .lower-buttons {
-  display: flex;
-  justify-content:flex-start;
   width: 800px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .container {
@@ -27,8 +27,8 @@ body {
 
 .upper-buttons>button {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 10px;
   padding: 10px;
+  margin-right: 10px;
   border: none;
   border-radius: 20px;
   font-weight: bold;
@@ -46,12 +46,12 @@ body {
 .lower-buttons>button {
   box-sizing: content-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 10px;
   padding: 10px;
   border: none;
   border-radius: 5px;
   font-weight: bold;
   color: white;
+  margin-right: 10px;
 }
 
 .lower-buttons>#color-black {
