@@ -10,6 +10,12 @@ createGrid();
 //Color modes
 let modeBlack = true;
 let modeRandom = false;
+const COLORBLACK = document.querySelector("#color-black");
+const COLORRANDOM = document.querySelector("#color-random");
+
+//Initialize larger black color and border
+COLORBLACK.style.transform = "scale(1.5, 1.5)";
+COLORBLACK.style.border = "3px grey solid";
 
 //Creates grid based and changes color of cells
 function createGrid () {
@@ -38,15 +44,24 @@ function createGrid () {
 document.querySelector("#clear-grid").addEventListener("click", clearGrid);
 
 //Chooses black color
-document.querySelector("#color-black").addEventListener("click", () => {
+COLORBLACK.addEventListener("click", () => {
     modeBlack = true;
     modeRandom = false;
+    COLORBLACK.style.transform = "scale(1.5, 1.5)";
+    COLORBLACK.style.border = "3px grey solid";
+    COLORRANDOM.style.transform = "scale(1, 1)";
+    COLORRANDOM.style.border = "none";
+        
 });
 
 //Chooses random color
-document.querySelector("#color-random").addEventListener("click", () => {
+COLORRANDOM.addEventListener("click", () => {
     modeBlack = false;
     modeRandom = true;
+    COLORRANDOM.style.transform = "scale(1.5, 1.5)";
+    COLORRANDOM.style.border = "3px grey solid";
+    COLORBLACK.style.transform = "scale(1, 1)";
+    COLORBLACK.style.border = "none";
 });
 
 //Asks for a number of cells per side to create new grid

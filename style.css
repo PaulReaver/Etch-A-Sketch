@@ -45,9 +45,9 @@ body {
 
 .lower-buttons {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
+  justify-content: center;
+  align-items: baseline;
+  gap: 30px;
 }
 
 .lower-buttons>button {
@@ -63,9 +63,4 @@ body {
 
 .lower-buttons>#color-random {
   background-image: linear-gradient(to right, red, orange, yellow,green,blue,indigo,violet);
-}
-
-#colors-text {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
 }
