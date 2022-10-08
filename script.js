@@ -52,13 +52,7 @@ document.querySelector("#color-random").addEventListener("click", () => {
 //Asks for a number of cells per side to create new grid
 document.querySelector("#change-grid-size").addEventListener("click",() => {
     do {
-        let oldSquaresPerSide  = squaresPerSide;
-        squaresPerSide = prompt ("Squares per side. Max number is 100.");
-        if (squaresPerSide == null || squaresPerSide == "") {
-            squaresPerSide = oldSquaresPerSide;
-            return;
-        }
-        squaresPerSide = Number(squaresPerSide);  
+        squaresPerSide = prompt ("Squares per side. Max number is 100."); 
     } while (squaresPerSide > 100 || squaresPerSide < 2 || isNaN(squaresPerSide));
 
     //Calls the functions to clear the grid
