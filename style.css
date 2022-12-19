@@ -1,66 +1,75 @@
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .upper-buttons,
 .lower-buttons {
-  width: 800px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+    width: 800px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px solid lightgrey;
-  width: 800px;
-  height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid lightgrey;
+    width: 800px;
+    height: 800px;
 }
 
-.container>div {
-  box-sizing: border-box;
+.container > div {
+    box-sizing: border-box;
 }
 
-.upper-buttons>button {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 10px;
-  margin-right: 10px;
-  border: none;
-  border-radius: 20px;
-  font-weight: bold;
-  background-color: lightgrey;
+.upper-buttons > button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: lightgrey;
 }
 
-.upper-buttons>button:hover {
-  filter:brightness(110%);
+.upper-buttons > button:hover {
+    filter: brightness(110%);
 }
 
-.upper-buttons>button:active {
-  filter:brightness(100%);
+.upper-buttons > button:active {
+    filter: brightness(100%);
 }
 
 .lower-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 30px;
 }
 
-.lower-buttons>button {
-  border: none;
-  border-radius: 5px;
-  width: 40px;
-  height: 40px;
+.lower-buttons > button {
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
 }
 
-.lower-buttons>#color-black {
-  background-color: black;
+.lower-buttons > #color-black {
+    background-color: black;
 }
 
-.lower-buttons>#color-random {
-  background-image: linear-gradient(to right, red, orange, yellow,green,blue,indigo,violet);
+.lower-buttons > #color-random {
+    background-image: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
 }
